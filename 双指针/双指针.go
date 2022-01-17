@@ -1,6 +1,8 @@
 package 双指针
 
-import "sort"
+import (
+	"sort"
+)
 
 /*
 示例 1：
@@ -74,3 +76,112 @@ func gcd(a, b int) int {
 	}
 	return b
 }
+
+//3、移动零，将数组中的0移到末尾
+// 0 0 1
+func moveZeroes(nums []int) {
+	for i, j := 0, 0; i < len(nums); {
+		if nums[i] != 0 {
+			nums[i], nums[j] = nums[j], nums[i]
+			j++
+		}
+		i++
+	}
+}
+
+//*
+// * Definition for singly-linked list.
+// * type ListNode struct {
+// *     Val int
+// *     Next *ListNode
+// * }
+//
+
+type ListNode struct {
+	Val  int
+	Next *ListNode
+}
+
+//4、输出链表的中间节点，如果有两个就输出第二个
+//12345 3
+//1234 3
+//123 2
+func middleNode1(head *ListNode) *ListNode {
+	lenTmp := head
+	len := 0
+	for lenTmp != nil {
+		len++
+		lenTmp = lenTmp.Next
+	}
+	midIndex := len/2 + 1
+	for i := 1; i < midIndex; i++ {
+		head = head.Next
+	}
+	return head
+}
+
+//12345 3
+//1234 3
+//123 2
+func middleNode(head *ListNode) *ListNode {
+	slow, fast := head, head
+	for fast != nil && fast.Next != nil {
+		slow = slow.Next
+		fast = fast.Next.Next
+	}
+	return slow
+}
+
+//5、删除链表的倒数第 N 个结点
+// 1 2 3 4 5
+func removeNthFromEnd1(head *ListNode, n int) *ListNode {
+	len := 0
+	tmp := head
+	for tmp != nil {
+		len++
+		tmp = tmp.Next
+	}
+	//12345 2
+	//12 2
+	//123 1
+	i := len - n + 1
+
+	dummy := &ListNode{0, head}
+	dummyTmp := dummy
+
+	for j := 1; j < i; j++ {
+		dummyTmp = dummyTmp.Next
+	}
+
+	if dummyTmp.Next.Next == nil {
+		dummyTmp.Next = nil
+	} else {
+		dummyTmp.Next = dummyTmp.Next.Next
+	}
+	return dummy.Next
+}
+
+//快慢指针
+//12345  2   n+m=L
+//  ｜
+//012345
+//
+func removeNthFromEnd(head *ListNode, n int) *ListNode {
+	dummy := &ListNode{0, head}
+	first, second := head, dummy
+	for i := 0; i < n; i++ {
+		first = first.Next
+	}
+	for ; first != nil; first = first.Next {
+		second = second.Next
+	}
+	second.Next = second.Next.Next
+	return dummy.Next
+}
+
+/*
+总结：
+双向指针:
+-收尾指针
+-快慢指针
+*/

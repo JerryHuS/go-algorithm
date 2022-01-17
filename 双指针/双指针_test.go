@@ -68,3 +68,157 @@ func Test_rotate(t *testing.T) {
 		})
 	}
 }
+
+func Test_moveZeroes(t *testing.T) {
+	type args struct {
+		nums []int
+	}
+	tests := []struct {
+		name string
+		args args
+	}{
+		// TODO: Add test cases.
+		{name: "case1", args: args{nums: []int{0, 1, 2, 3}}},
+		{name: "case2", args: args{nums: []int{0, 1, 2, 3, 0, 0}}},
+		{name: "case3", args: args{nums: []int{1, 2, 3, 0, 0}}},
+		{name: "case4", args: args{nums: []int{0, 0, 1}}},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			fmt.Println(tt.args.nums)
+			moveZeroes(tt.args.nums)
+			fmt.Println(tt.args.nums)
+		})
+	}
+}
+
+func Test_removeNthFromEnd(t *testing.T) {
+	type args struct {
+		head *ListNode
+		n    int
+	}
+	tests := []struct {
+		name string
+		args args
+		want *ListNode
+	}{
+		// TODO: Add test cases.
+		{
+			name: "case1",
+			args: args{
+				head: &ListNode{
+					Val: 1,
+					Next: &ListNode{
+						Val: 2,
+						Next: &ListNode{
+							Val:  3,
+							Next: nil,
+						},
+					},
+				},
+				n: 1,
+			},
+			want: &ListNode{
+				Val: 1,
+				Next: &ListNode{
+					Val:  2,
+					Next: nil,
+				},
+			},
+		},
+		{
+			name: "case2",
+			args: args{
+				head: &ListNode{
+					Val: 1,
+					Next: &ListNode{
+						Val: 2,
+						Next: &ListNode{
+							Val:  3,
+							Next: nil,
+						},
+					},
+				},
+				n: 2,
+			},
+			want: &ListNode{
+				Val: 1,
+				Next: &ListNode{
+					Val:  3,
+					Next: nil,
+				},
+			},
+		},
+		{
+			name: "case3",
+			args: args{
+				head: &ListNode{
+					Val:  1,
+					Next: nil,
+				},
+				n: 1,
+			},
+			want: nil,
+		},
+		{
+			name: "case4",
+			args: args{
+				head: &ListNode{
+					Val: 1,
+					Next: &ListNode{
+						Val:  2,
+						Next: nil,
+					},
+				},
+				n: 2,
+			},
+			want: &ListNode{
+				Val:  2,
+				Next: nil,
+			},
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := removeNthFromEnd(tt.args.head, tt.args.n); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("removeNthFromEnd() = %+v, want %v", got, tt.want)
+				fmt.Print("got:")
+				PrintList(got)
+			}
+		})
+	}
+}
+
+func PrintList(list *ListNode) {
+	for list != nil {
+		fmt.Print(list.Val)
+		list = list.Next
+	}
+	fmt.Println()
+}
+
+func Test_middleNode(t *testing.T) {
+	type args struct {
+		head *ListNode
+	}
+	tests := []struct {
+		name string
+		args args
+		want *ListNode
+	}{
+		// TODO: Add test cases.
+		{
+			name: "case1", args: args{head: &ListNode{1, &ListNode{2, &ListNode{3, nil}}}}, want: &ListNode{2, &ListNode{3, nil}},
+		},
+		{
+			name: "case2", args: args{head: &ListNode{1, &ListNode{2, nil}}}, want: &ListNode{2, nil},
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := middleNode(tt.args.head); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("middleNode() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
