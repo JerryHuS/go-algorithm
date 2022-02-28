@@ -103,3 +103,34 @@ func Test_mergeTreesBFS(t *testing.T) {
 		})
 	}
 }
+
+func TestBFSZTrees(t *testing.T) {
+	type args struct {
+		root *TreeNode
+	}
+	tests := []struct {
+		name string
+		args args
+		want []int
+	}{
+		// TODO: Add test cases.
+		/*
+			 		1
+			99				100
+						5		4
+
+		*/
+		{name: "case1", args: args{root: &TreeNode{
+			Val:   1,
+			Left:  &TreeNode{99, nil, nil},
+			Right: &TreeNode{100, &TreeNode{5, nil, nil}, &TreeNode{4, nil, nil}},
+		}}, want: []int{1, 99, 100, 4, 5}},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := BFSZTrees(tt.args.root); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("BFSZTrees() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}

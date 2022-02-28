@@ -3,7 +3,7 @@ package 滑动窗口
 import "math"
 
 // 12334567 ans:5
-func lengthOfLongestSubstring(s string) int {
+func lengthOfLongestSubstring1(s string) int {
 	if len(s) == 0 {
 		return 0
 	}
@@ -19,6 +19,30 @@ func lengthOfLongestSubstring(s string) int {
 			i++
 		} else {
 			dataMap[s[j]] = 1
+			ans = int(math.Max(float64(ans), float64(j-i)+1))
+			j++
+		}
+	}
+	return ans
+}
+
+func lengthOfLongestSubstring(s string) int {
+	if len(s) == 0 {
+		return 0
+	}
+	if len(s) == 1 {
+		return 1
+
+	}
+	mapStr := make(map[byte]int)
+	mapStr[s[0]] = 1
+	ans := 1
+	for i, j := 0, 1; i < len(s) && j < len(s); {
+		if _, ok := mapStr[s[j]]; ok {
+			delete(mapStr, s[i])
+			i++
+		} else {
+			mapStr[s[j]] = 1
 			ans = int(math.Max(float64(ans), float64(j-i)+1))
 			j++
 		}

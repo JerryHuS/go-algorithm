@@ -153,3 +153,35 @@ func DFSTrees(root *TreeNode) []int {
 	}
 	return valArr
 }
+
+func BFSZTrees(root *TreeNode) []int {
+	arrInt := make([]int, 0)
+	queue := list.New()
+	queue.PushBack(root)
+	i := 0
+	for queue.Len() > 0 {
+		tmpQueue := queue
+		i++
+		queue = list.New()
+		for tmpQueue.Len() > 0 {
+			node := tmpQueue.Remove(tmpQueue.Front()).(*TreeNode)
+			arrInt = append(arrInt, node.Val)
+			if i%2 != 0 {
+				if node.Left != nil {
+					queue.PushBack(node.Left)
+				}
+				if node.Right != nil {
+					queue.PushBack(node.Right)
+				}
+			} else {
+				if node.Right != nil {
+					queue.PushBack(node.Right)
+				}
+				if node.Left != nil {
+					queue.PushBack(node.Left)
+				}
+			}
+		}
+	}
+	return arrInt
+}
