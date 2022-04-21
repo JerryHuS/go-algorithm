@@ -6,6 +6,11 @@
 
 ### 查找和排序类
 
+### 找规律类
+- [数组的线性排列，下一个排列](https://github.com/JerryHuS/go-algorithm/blob/main/%E6%89%BE%E8%A7%84%E5%BE%8B%E7%B1%BB/%E5%AD%97%E5%85%B8%E5%BA%8F%E6%8E%92%E6%95%B0.go)
+- [字符串的z型变换](https://github.com/JerryHuS/go-algorithm/blob/main/%E6%89%BE%E8%A7%84%E5%BE%8B%E7%B1%BB/Z%E5%AD%97%E5%8F%98%E6%8D%A2.go)
+- [按字典序返回n内所有整数](https://github.com/JerryHuS/go-algorithm/blob/main/%E6%89%BE%E8%A7%84%E5%BE%8B%E7%B1%BB/%E5%AD%97%E5%85%B8%E5%BA%8F%E6%8E%92%E6%95%B0.go)
+
 ### 滑动窗口类
 
 - [S1的排列之一是S2的子串](https://github.com/JerryHuS/LeetCode/blob/main/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%8E%92%E5%88%97.go)
