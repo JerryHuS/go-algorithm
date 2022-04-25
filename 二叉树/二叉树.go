@@ -1,4 +1,4 @@
-package 二叉树
+package main
 
 type TreeNode struct {
 	Val   int
