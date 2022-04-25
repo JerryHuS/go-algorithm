@@ -11,6 +11,7 @@
 - [数组的线性排列，下一个排列](https://github.com/JerryHuS/go-algorithm/blob/main/%E6%89%BE%E8%A7%84%E5%BE%8B%E7%B1%BB/%E4%B8%8B%E4%B8%80%E4%B8%AA%E6%8E%92%E5%88%97.go)
 - [字符串的z型变换](https://github.com/JerryHuS/go-algorithm/blob/main/%E6%89%BE%E8%A7%84%E5%BE%8B%E7%B1%BB/Z%E5%AD%97%E5%8F%98%E6%8D%A2.go)
 - [按字典序返回n内所有整数](https://github.com/JerryHuS/go-algorithm/blob/main/%E6%89%BE%E8%A7%84%E5%BE%8B%E7%B1%BB/%E5%AD%97%E5%85%B8%E5%BA%8F%E6%8E%92%E6%95%B0.go)
+- [O(n)下对数组的一些操作](https://github.com/JerryHuS/go-algorithm/blob/main/%E6%89%BE%E8%A7%84%E5%BE%8B%E7%B1%BB/operateArrON.go)
 
 ### 滑动窗口类
 
