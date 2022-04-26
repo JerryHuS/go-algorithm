@@ -5,21 +5,22 @@
 - [LRU实现](https://github.com/JerryHuS/LeetCode/blob/main/LRU/lru.go)
 
 ### 查找和排序类
+- [基础的二分查找](https://github.com/JerryHuS/go-algorithm/blob/main/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/%E5%9F%BA%E7%A1%80%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE.go)
+- [旋转数组后二分查找](https://github.com/JerryHuS/go-algorithm/blob/main/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84%E5%90%8E%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE.go)
 
-### 找规律类
+### 二叉树
+- [前中后序遍历](https://github.com/JerryHuS/go-algorithm/blob/main/%E4%BA%8C%E5%8F%89%E6%A0%91/%E4%BA%8C%E5%8F%89%E6%A0%91.go)
+- [二叉树是否对称](https://github.com/JerryHuS/go-algorithm/blob/main/%E4%BA%8C%E5%8F%89%E6%A0%91/%E6%98%AF%E5%90%A6%E5%AF%B9%E7%A7%B0.go)
+- [树高度](https://github.com/JerryHuS/go-algorithm/blob/main/%E4%BA%8C%E5%8F%89%E6%A0%91/%E6%A0%91%E7%9A%84%E9%AB%98%E5%BA%A6.go)
+- [树的最长节点距离](https://github.com/JerryHuS/go-algorithm/blob/main/%E4%BA%8C%E5%8F%89%E6%A0%91/%E6%9C%80%E9%95%BF%E8%8A%82%E7%82%B9%E8%B7%9D%E7%A6%BB.go)
 
-- [数组的线性排列，下一个排列](https://github.com/JerryHuS/go-algorithm/blob/main/%E6%89%BE%E8%A7%84%E5%BE%8B%E7%B1%BB/%E4%B8%8B%E4%B8%80%E4%B8%AA%E6%8E%92%E5%88%97.go)
-- [字符串的z型变换](https://github.com/JerryHuS/go-algorithm/blob/main/%E6%89%BE%E8%A7%84%E5%BE%8B%E7%B1%BB/Z%E5%AD%97%E5%8F%98%E6%8D%A2.go)
-- [按字典序返回n内所有整数](https://github.com/JerryHuS/go-algorithm/blob/main/%E6%89%BE%E8%A7%84%E5%BE%8B%E7%B1%BB/%E5%AD%97%E5%85%B8%E5%BA%8F%E6%8E%92%E6%95%B0.go)
-- [O(n)下对数组的一些操作](https://github.com/JerryHuS/go-algorithm/blob/main/%E6%89%BE%E8%A7%84%E5%BE%8B%E7%B1%BB/operateArrON.go)
+### 优先搜索
 
-### 滑动窗口类
-
-- [S1的排列之一是S2的子串](https://github.com/JerryHuS/LeetCode/blob/main/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%8E%92%E5%88%97.go)
-- [没有重复字符的最长子串](https://github.com/JerryHuS/LeetCode/blob/main/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2.go)
+### 动态规划
+- [最长公共子串、子序列](https://github.com/JerryHuS/go-algorithm/blob/main/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/longestCommonSubsequence.go)
+- [字符按数字编码，给一串数字有多少种译码方式](https://github.com/JerryHuS/go-algorithm/blob/main/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/numsOfTrans.go)
 
 ### 双指针类
-
 - [有序数组的平方](https://github.com/JerryHuS/go-algorithm/blob/main/%E5%8F%8C%E6%8C%87%E9%92%88/%E5%8F%8C%E6%8C%87%E9%92%88.go)
 - [将数组中的0移到末尾](https://github.com/JerryHuS/go-algorithm/blob/main/%E5%8F%8C%E6%8C%87%E9%92%88/%E5%8F%8C%E6%8C%87%E9%92%88.go)
 - [删除链表的倒数第N个结点](https://github.com/JerryHuS/go-algorithm/blob/main/%E5%8F%8C%E6%8C%87%E9%92%88/%E5%8F%8C%E6%8C%87%E9%92%88.go)
@@ -27,16 +28,21 @@
 - [接雨水](https://github.com/JerryHuS/go-algorithm/blob/main/%E5%8F%8C%E6%8C%87%E9%92%88/%E6%8E%A5%E9%9B%A8%E6%B0%B4.go)
 - [坐标轴覆盖的最大面积](https://github.com/JerryHuS/go-algorithm/blob/main/%E5%8F%8C%E6%8C%87%E9%92%88/%E5%9D%90%E6%A0%87%E8%BD%B4%E8%A6%86%E7%9B%96%E6%9C%80%E5%A4%A7%E9%9D%A2%E7%A7%AF.go)
 
-### 链表操作
+### 找规律类
+- [数组的线性排列，下一个排列](https://github.com/JerryHuS/go-algorithm/blob/main/%E6%89%BE%E8%A7%84%E5%BE%8B%E7%B1%BB/%E4%B8%8B%E4%B8%80%E4%B8%AA%E6%8E%92%E5%88%97.go)
+- [字符串的z型变换](https://github.com/JerryHuS/go-algorithm/blob/main/%E6%89%BE%E8%A7%84%E5%BE%8B%E7%B1%BB/Z%E5%AD%97%E5%8F%98%E6%8D%A2.go)
+- [按字典序返回n内所有整数](https://github.com/JerryHuS/go-algorithm/blob/main/%E6%89%BE%E8%A7%84%E5%BE%8B%E7%B1%BB/%E5%AD%97%E5%85%B8%E5%BA%8F%E6%8E%92%E6%95%B0.go)
+- [O(n)下对数组的一些操作](https://github.com/JerryHuS/go-algorithm/blob/main/%E6%89%BE%E8%A7%84%E5%BE%8B%E7%B1%BB/operateArrON.go)
 
-### 动态规划
-
-- [最长公共子串、子序列](https://github.com/JerryHuS/go-algorithm/blob/main/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/longestCommonSubsequence.go)
-- [字符按数字编码，给一串数字有多少种译码方式](https://github.com/JerryHuS/go-algorithm/blob/main/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/numsOfTrans.go)
+### 滑动窗口类
+- [S1的排列之一是S2的子串](https://github.com/JerryHuS/LeetCode/blob/main/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%8E%92%E5%88%97.go)
+- [没有重复字符的最长子串](https://github.com/JerryHuS/LeetCode/blob/main/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2.go)
 
 ### 递归思想类
 
 ### 回溯思想类
+
+### 链表操作
 
 ---
 Keep Up!

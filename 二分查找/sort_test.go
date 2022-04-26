@@ -1,4 +1,4 @@
-package 排序类
+package main
 
 import (
 	"fmt"

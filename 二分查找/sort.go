@@ -1,4 +1,4 @@
-package 排序类
+package main
 
 func sortByBubble(arr []int) {
 	len := len(arr)

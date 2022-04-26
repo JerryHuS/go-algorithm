@@ -5,7 +5,7 @@
  * @Version: 1.0.0
  * @Date: 2022/4/26 10:58
  */
-package 二分查找
+package main
 
 import "testing"
 

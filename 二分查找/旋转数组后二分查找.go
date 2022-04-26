@@ -5,7 +5,7 @@
  * @Version: 1.0.0
  * @Date: 2022/4/26 10:42
  */
-package 二分查找
+package main
 
 /*
 1 2 3 4 5 6 7
