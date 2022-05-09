@@ -7,6 +7,8 @@
  */
 package main
 
+import "math"
+
 /*
 1 2 3 4 5 6 7
 []int{2,3,4,5,6,7,1}
@@ -37,4 +39,16 @@ func findTarget(nums []int, target int) int {
 		}
 	}
 	return -1
+}
+
+func findMoveK(nums []int) int {
+	min := math.MaxInt32
+	ans := 0
+	for i := range nums {
+		if nums[i] < min {
+			min = nums[i]
+			ans = i
+		}
+	}
+	return ans
 }
